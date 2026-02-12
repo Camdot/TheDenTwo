@@ -4,6 +4,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Database;
+using Content.Shared._DEN.Traits.Prototypes;
 using Content.Shared.Body;
 using Content.Shared.CCVar;
 using Content.Shared.Construction.Prototypes;
@@ -93,7 +94,8 @@ namespace Content.Server.Preferences.Managers
 
             var jobs = profile.Jobs.ToDictionary(j => new ProtoId<JobPrototype>(j.JobName), j => (JobPriority) j.Priority);
             var antags = profile.Antags.Select(a => new ProtoId<AntagPrototype>(a.AntagName));
-            var traits = profile.Traits.Select(t => new ProtoId<TraitPrototype>(t.TraitName));
+            // var traits = profile.Traits.Select(t => new ProtoId<TraitPrototype>(t.TraitName)); // DEN
+            var traits = profile.Traits.Select(t => new ProtoId<EntityTraitPrototype>(t.TraitName)); // DEN
 
             var sex = Sex.Male;
             if (Enum.TryParse<Sex>(profile.Sex, true, out var sexVal))
