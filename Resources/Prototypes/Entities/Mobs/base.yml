@@ -123,7 +123,6 @@
       - ActionCritSuccumb
       - ActionCritFakeDeath
       - ActionCritLastWords
-  - type: StoreDamageTakenOnMind
   - type: Deathgasp
   - type: HealthExaminable
     examinableTypes:
