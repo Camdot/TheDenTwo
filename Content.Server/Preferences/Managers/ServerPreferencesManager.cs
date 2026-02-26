@@ -133,7 +133,7 @@ namespace Content.Server.Preferences.Managers
 
                     if (parsed is null) continue;
 
-                    markingsList.Add(parsed.Value);
+                    markingsList.Add(parsed);
                 }
 
                 if (Marking.ParseFromDbString($"{profile.HairName}@{profile.HairColor}") is { } facialMarking)

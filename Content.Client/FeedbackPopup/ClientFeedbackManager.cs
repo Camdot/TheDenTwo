@@ -1,4 +1,5 @@
 ﻿using Content.Shared.FeedbackSystem;
+using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client.FeedbackPopup;
@@ -9,7 +10,7 @@ public sealed class ClientFeedbackManager : SharedFeedbackManager
     /// <summary>
     /// A read-only set representing the currently displayed feedback popups.
     /// </summary>
-    public override IReadOnlySet<ProtoId<FeedbackPopupPrototype>> DisplayedPopups => _displayedPopups;
+    public IReadOnlySet<ProtoId<FeedbackPopupPrototype>> DisplayedPopups => _displayedPopups;
 
     private readonly HashSet<ProtoId<FeedbackPopupPrototype>> _displayedPopups = [];
 

@@ -89,7 +89,6 @@
         type: PaperBoundUserInterface
   - type: FaxableObject
   - type: PaperVisuals
-  - type: StationAiWhitelist
 
 - type: entity
   name: paper scrap
@@ -468,4 +467,3 @@
       - !type:EmptyAllContainersBehaviour
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: StationAiWhitelist
