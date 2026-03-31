@@ -51,18 +51,6 @@
     - type: GermanAccent
 
 - type: entityTrait
-  id: ItalianAccent
-  name: trait-italian-name
-  description: trait-italian-desc
-  category: SpeechTraits
-  cost: 1
-  functions:
-  - !type:AddComponentTrait
-    components:
-    - type: ReplacementAccent
-      accent: italian
-
-- type: entityTrait
   id: Liar
   name: trait-liar-name
   description: trait-liar-desc
