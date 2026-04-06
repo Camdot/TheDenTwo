@@ -4,7 +4,7 @@
   name: mantis
   components:
   - type: SpawnPoint
-    job_id: mantis
+    job_id: Mantis
   - type: Sprite
     layers:
     - state: green
