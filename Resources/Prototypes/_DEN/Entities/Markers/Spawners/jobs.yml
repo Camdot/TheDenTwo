@@ -1,0 +1,12 @@
+- type: entity
+  id: SpawnPointMantis
+  parent: SpawnPointJobBase
+  name: mantis
+  components:
+  - type: SpawnPoint
+    job_id: mantis
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _DEN/Markers/jobs.rsi
+      state: Mantis
