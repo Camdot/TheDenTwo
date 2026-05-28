@@ -48,7 +48,16 @@ public sealed partial class JobPrototype : IPrototype
     /// Requirements for the job.
     /// </summary>
     [DataField, Access(typeof(SharedRoleSystem), Other = AccessPermissions.None)]
+    [Obsolete("Use PlayerRequirements instead")] // DEN
     public HashSet<JobRequirement>? Requirements;
+
+    // Begin DEN: Use PlayerRequirements
+    /// <summary>
+    ///     A list of PlayerRequirements for this job.
+    /// </summary>
+    [DataField("playerRequirements")]
+    public List<IPlayerRequirement>? PlayerRequirements;
+    // End DEN
 
     /// <summary>
     /// When true - the station will have announcement about arrival of this player.
