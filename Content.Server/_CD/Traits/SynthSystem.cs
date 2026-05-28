@@ -10,8 +10,8 @@ public sealed class SynthSystem : EntitySystem
     private static readonly ProtoId<TypingIndicatorPrototype> RobotTypingIndicator = "robot"; // Misfit - Type safety
     private static readonly ProtoId<ReagentPrototype> SynthBlood = "SynthBlood"; // Misfit - Type safety
 
-    [Dependency] private BloodstreamSystem _bloodstream = default!;
-    [Dependency] private SharedTypingIndicatorSystem _typingIndicator = default!; // TheDen - Switch to set indicator prototype
+    [Dependency] private BloodstreamSystem _bloodstream = default!; // TheDen - remove readonly
+    [Dependency] private SharedTypingIndicatorSystem _typingIndicator = default!; // TheDen - Switch to set indicator prototype & remove readonly
 
     public override void Initialize()
     {
