@@ -59,7 +59,7 @@ public sealed partial class ChatUIController : UIController
     [Dependency] private IStateManager _state = default!;
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private IReplayRecordingManager _replayRecording = default!;
-    [Dependency] private readonly DenuUIController _denuUIController = default!;
+    [Dependency] private DenuUIController _denuUIController = default!;
 
     [UISystemDependency] private readonly ExamineSystem? _examine = default;
     [UISystemDependency] private readonly GhostSystem? _ghost = default;

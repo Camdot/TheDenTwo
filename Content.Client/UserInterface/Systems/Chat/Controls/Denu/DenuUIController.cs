@@ -19,10 +19,10 @@ using Range = Robust.Client.UserInterface.Controls.Range;
 
 namespace Content.Client.UserInterface.Systems.Chat.Controls.Denu;
 
-public sealed class DenuUIController : UIController
+public sealed partial class DenuUIController : UIController
 {
-    [UISystemDependency] private readonly TypingIndicatorSystem _typingIndicatorSystem = default!;
-    [Dependency] private readonly IOverlayManager _overlayManager = default!;
+    [UISystemDependency] private TypingIndicatorSystem _typingIndicatorSystem = default!;
+    [Dependency] private IOverlayManager _overlayManager = default!;
 
     private readonly DenuModuleRegistry _moduleRegistry = new();
     private ChatFormatterDenuModule? _formatterModule;

@@ -10,12 +10,12 @@ using Robust.Shared.Player;
 
 namespace Content.Server._DEN.Denu;
 
-public sealed class DenuSystem : EntitySystem
+public sealed partial class DenuSystem : EntitySystem
 {
-    [Dependency] private readonly IDenuSettingsManager _settingsManager = default!;
-    [Dependency] private readonly IServerPreferencesManager _prefsManager = default!;
-    [Dependency] private readonly IServerDbManager _db = default!;
-    [Dependency] private readonly UserDbDataManager _userDb = default!;
+    [Dependency] private IDenuSettingsManager _settingsManager = default!;
+    [Dependency] private IServerPreferencesManager _prefsManager = default!;
+    [Dependency] private IServerDbManager _db = default!;
+    [Dependency] private UserDbDataManager _userDb = default!;
 
     public override void Initialize()
     {

@@ -8,9 +8,9 @@ using Robust.Shared.Timing;
 namespace Content.Client.UserInterface.Systems.Chat.Controls;
 
 
-public sealed class CircleOverlay : Overlay
+public sealed partial class CircleOverlay : Overlay
 {
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
 
@@ -18,8 +18,8 @@ public sealed class CircleOverlay : Overlay
     private const float OutlineThickness = 0.05f;
     private const float EaseInDuration = 0.5f;
     private const float EaseOutDuration = 2.5f;
-    private const float FadeTime = EaseInDuration + EaseOutDuration; 
-    private const int CircleSegments = 128; 
+    private const float FadeTime = EaseInDuration + EaseOutDuration;
+    private const int CircleSegments = 128;
     private const float MaxOpacity = 1.0f;
 
     public float Range { get; set; } = 10.0f;
@@ -102,7 +102,7 @@ public sealed class CircleOverlay : Overlay
         if (elapsedSeconds >= FadeTime)
         {
             _isVisible = false;
-            OnFullyFaded?.Invoke(); 
+            OnFullyFaded?.Invoke();
             return;
         }
 

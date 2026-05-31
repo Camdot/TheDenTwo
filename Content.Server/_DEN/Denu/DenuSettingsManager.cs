@@ -10,10 +10,10 @@ using Robust.Shared.Player;
 
 namespace Content.Server._DEN.Denu;
 
-public sealed class DenuSettingsManager : IDenuSettingsManager, IPostInjectInit
+public sealed partial class DenuSettingsManager : IDenuSettingsManager, IPostInjectInit
 {
-    [Dependency] private readonly IServerDbManager _db = default!;
-    [Dependency] private readonly UserDbDataManager _userDb = default!;
+    [Dependency] private IServerDbManager _db = default!;
+    [Dependency] private UserDbDataManager _userDb = default!;
 
     private readonly Dictionary<Guid, DenuSettingsRoot> _cache = new();
 

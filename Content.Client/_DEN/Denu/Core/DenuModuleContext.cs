@@ -6,9 +6,9 @@ using RTimer = Robust.Shared.Timing.Timer;
 
 namespace Content.Client._DEN.Denu.Core;
 
-public sealed class DenuModuleContext
+public sealed partial class DenuModuleContext
 {
-    [Dependency] private readonly IEntityManager _entityManager = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
 
     private DenuSettingsRoot? _settingsRoot;
     private int _currentProfileId;
