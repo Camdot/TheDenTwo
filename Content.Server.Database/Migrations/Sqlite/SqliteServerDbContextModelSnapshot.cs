@@ -815,6 +815,35 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("denu_settings", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.ConsentData", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("global_consent_info_id");
+
+                    b.Property<string>("ConsentId")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("consent_id");
+
+                    b.Property<bool>("ConsentValue")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("consent_value");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("Id")
+                        .HasName("PK_global_consent_info");
+
+                    b.HasIndex("Id", "UserId")
+                        .IsUnique();
+
+                    b.ToTable("global_consent_info", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.IPIntelCache", b =>
                 {
                     b.Property<int>("Id")

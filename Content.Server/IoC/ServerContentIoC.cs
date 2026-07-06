@@ -1,3 +1,4 @@
+using Content.Server._DEN.Discord;
 using Content.Server._DEN.Requirements.Managers;
 using Content.Server._DEN.Denu;
 using Content.Server.Administration;
@@ -87,5 +88,6 @@ internal static class ServerContentIoC
         deps.Register<ISharedFeedbackManager, ServerFeedbackManager>();
         deps.Register<IDenuSettingsManager, DenuSettingsManager>(); // DEN
         deps.Register<IPlayerRequirementManager, PlayerRequirementManager>(); // DEN
+        deps.Register<DiscordCommands>(); // DEN
     }
 }
