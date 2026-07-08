@@ -11,7 +11,6 @@ using Content.Shared._DEN.Denu;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
-using Range = Robust.Client.UserInterface.Controls.Range;
 
 namespace Content.Client._DEN.UserInterface.Systems.Chat.Controls.Denu;
 
