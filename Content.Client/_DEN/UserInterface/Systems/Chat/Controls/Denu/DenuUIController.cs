@@ -4,20 +4,16 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
-using System.Numerics;
 using Content.Client._DEN.Denu.Core;
 using Content.Client._DEN.Denu.Modules.Chat;
 using Content.Client.Chat.TypingIndicator;
 using Content.Shared._DEN.Denu;
-using Content.Shared._DEN.Denu.Chat;
-using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
-using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.Controllers;
 using Range = Robust.Client.UserInterface.Controls.Range;
 
-namespace Content.Client.UserInterface.Systems.Chat.Controls.Denu;
+namespace Content.Client._DEN.UserInterface.Systems.Chat.Controls.Denu;
 
 public sealed partial class DenuUIController : UIController
 {
@@ -83,7 +79,7 @@ public sealed partial class DenuUIController : UIController
 
     private DenuWindow? _denuWindow;
     private DenuWindow? _windowWithEvents;
-    private CircleOverlay? _circleOverlay;
+    private _DEN.UserInterface.Systems.Chat.Controls.CircleOverlay? _circleOverlay;
 
     public override void Initialize()
     {

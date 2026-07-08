@@ -10,7 +10,7 @@ namespace Content.Client._DEN.Denu.Modules.Chat;
 [GenerateTypedNameReferences]
 public sealed partial class EarmuffsTab : UiControl
 {
-    private readonly DenuUIController _denuUIController;
+    private readonly UserInterface.Systems.Chat.Controls.Denu.DenuUIController _denuUIController;
     private EarmuffsDenuModule? _module;
     private bool _handlersSetup;
     private DenuUiBindings.BoundSlider? _rangeBinding;
@@ -18,7 +18,7 @@ public sealed partial class EarmuffsTab : UiControl
     public EarmuffsTab()
     {
         RobustXamlLoader.Load(this);
-        _denuUIController = UserInterfaceManager.GetUIController<DenuUIController>();
+        _denuUIController = UserInterfaceManager.GetUIController<UserInterface.Systems.Chat.Controls.Denu.DenuUIController>();
     }
 
     public EarmuffsTab(EarmuffsDenuModule module) : this()

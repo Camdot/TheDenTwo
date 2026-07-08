@@ -8,8 +8,7 @@ using Content.Client.Resources;
 using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface.Controls;
 
-
-namespace Content.Client.UserInterface.Systems.Chat.Controls.Denu;
+namespace Content.Client._DEN.UserInterface.Systems.Chat.Controls.Denu;
 
 
 public sealed class DenuButton : ContainerButton

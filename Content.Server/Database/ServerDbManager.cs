@@ -1008,6 +1008,7 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.RemoveJobWhitelist(player, job));
         }
 
+        // DEN Start: Denu
         public Task<string> LoadDenuSettingsJsonAsync(Guid userId)
         {
             DbReadOpsMetric.Inc();
@@ -1025,6 +1026,7 @@ namespace Content.Server.Database
             DbReadOpsMetric.Inc();
             return RunDbCommand(() => _db.GetProfileSlotToProfileIdMapAsync(userId));
         }
+        // DEN End
 
         public Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score)
         {

@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
+using Content.Client._DEN.UserInterface.Systems.Chat.Controls.Denu;
 using Content.Client.Administration.Managers;
 using Content.Client.Chat;
 using Content.Client.Chat.Managers;
@@ -11,9 +12,7 @@ using Content.Client.Gameplay;
 using Content.Client.Ghost;
 using Content.Client.Mind;
 using Content.Client.Roles;
-using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Screens;
-using Content.Client.UserInterface.Systems.Chat.Controls.Denu;
 using Content.Client.UserInterface.Systems.Chat.Widgets;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Shared.Administration;
@@ -59,7 +58,7 @@ public sealed partial class ChatUIController : UIController
     [Dependency] private IStateManager _state = default!;
     [Dependency] private IGameTiming _timing = default!;
     [Dependency] private IReplayRecordingManager _replayRecording = default!;
-    [Dependency] private DenuUIController _denuUIController = default!;
+    [Dependency] private DenuUIController _denuUIController = default!; // DEN
 
     [UISystemDependency] private readonly ExamineSystem? _examine = default;
     [UISystemDependency] private readonly GhostSystem? _ghost = default;
@@ -776,10 +775,12 @@ public sealed partial class ChatUIController : UIController
             text = $";{text}";
         }
 
+        // DEN Start: Denu
         if (_denuUIController.AutoFormatterEnabled)
         {
             text = _denuUIController.FormatMessage(text);
         }
+        // DEN End
 
         _manager.SendMessage(text, prefixChannel == 0 ? channel : prefixChannel);
     }

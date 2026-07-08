@@ -1,11 +1,9 @@
 ﻿using System.Numerics;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
-using Robust.Shared.Maths;
 using Robust.Shared.Timing;
 
-
-namespace Content.Client.UserInterface.Systems.Chat.Controls;
+namespace Content.Client._DEN.UserInterface.Systems.Chat.Controls;
 
 
 public sealed partial class CircleOverlay : Overlay

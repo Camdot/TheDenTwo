@@ -69,14 +69,15 @@ public sealed partial class ChatSystem
     {
         foreach (var (session, data) in GetRecipients(source, VoiceRange))
         {
+            // DEN Start: VRChat earmuffs, but on Den!
             if (session.AttachedEntity is not { Valid: true } playerEntity)
                 continue;
 
-            // DEN edit: VRChat earmuffs, but on Den!
             if (TryComp<EarmuffsComponent>(playerEntity, out var earmuffs)
                 && earmuffs.Running && earmuffs.HearRange < data.Range
                 && (channel == ChatChannel.Local || channel == ChatChannel.Emotes))
                 continue;
+            // DEN End
 
             var entRange = MessageRangeCheck(session, data, range);
             if (entRange == MessageRangeCheckResult.Disallowed)
