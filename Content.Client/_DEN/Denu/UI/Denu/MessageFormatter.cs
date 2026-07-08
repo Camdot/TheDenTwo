@@ -7,7 +7,7 @@
 using System.Linq;
 using System.Text;
 
-namespace Content.Client._DEN.UserInterface.Systems.Chat.Controls.Denu;
+namespace Content.Client._DEN.Denu.UI.Denu;
 
 
 public sealed class MessageFormatter

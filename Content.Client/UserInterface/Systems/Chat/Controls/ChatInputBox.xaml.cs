@@ -1,4 +1,4 @@
-﻿using Content.Client._DEN.UserInterface.Systems.Chat.Controls.Denu;
+﻿using Content.Client._DEN.Denu.UI.Denu;
 using Content.Shared.Chat;
 using Content.Shared.Input;
 using Robust.Client.UserInterface.Controls;

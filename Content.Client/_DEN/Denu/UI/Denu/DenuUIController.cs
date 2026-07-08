@@ -6,13 +6,14 @@
 
 using Content.Client._DEN.Denu.Core;
 using Content.Client._DEN.Denu.Modules.Chat;
+using Content.Client._DEN.UserInterface.Systems.Chat.Controls;
 using Content.Client.Chat.TypingIndicator;
 using Content.Shared._DEN.Denu;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
 
-namespace Content.Client._DEN.UserInterface.Systems.Chat.Controls.Denu;
+namespace Content.Client._DEN.Denu.UI.Denu;
 
 public sealed partial class DenuUIController : UIController
 {
@@ -78,7 +79,7 @@ public sealed partial class DenuUIController : UIController
 
     private DenuWindow? _denuWindow;
     private DenuWindow? _windowWithEvents;
-    private _DEN.UserInterface.Systems.Chat.Controls.CircleOverlay? _circleOverlay;
+    private CircleOverlay? _circleOverlay;
 
     public override void Initialize()
     {

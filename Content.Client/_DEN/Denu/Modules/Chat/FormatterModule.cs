@@ -1,8 +1,6 @@
 using Content.Client._DEN.Denu.Core;
-using Content.Client._DEN.UserInterface.Systems.Chat.Controls.Denu;
-using Content.Client.UserInterface.Systems.Chat.Controls.Denu;
+using Content.Client._DEN.Denu.UI.Denu;
 using Content.Shared._DEN.Denu.Chat;
-using Robust.Client.Graphics;
 using UiControl = Robust.Client.UserInterface.Control;
 
 namespace Content.Client._DEN.Denu.Modules.Chat;

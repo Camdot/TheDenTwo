@@ -7,7 +7,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Shared.ContentPack;
 using Robust.Shared.Utility;
 
-namespace Content.Client._DEN.UserInterface.Systems.Chat.Controls.Denu.Components;
+namespace Content.Client._DEN.Denu.UI.Denu.Components;
 
 
 public sealed class FormattedTextDisplay : PanelContainer

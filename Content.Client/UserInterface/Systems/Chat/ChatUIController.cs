@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
-using Content.Client._DEN.UserInterface.Systems.Chat.Controls.Denu;
+using Content.Client._DEN.Denu.UI.Denu;
 using Content.Client.Administration.Managers;
 using Content.Client.Chat;
 using Content.Client.Chat.Managers;
